@@ -64,11 +64,33 @@ let largestNumber = [2,5,10,-14,2,7,1,9];
 
 // pro tip 
 
-let larN = largestNumber[0];
+// let larN = largestNumber[0];
 
-for(let i = 1; i < largestNumber.length; i++){
-    if(largestNumber[i] > larN){
-        larN = largestNumber[i];
+// for(let i = 1; i < largestNumber.length; i++){
+//     if(largestNumber[i] > larN){
+//         larN = largestNumber[i];
+//     }
+// }
+// console.log(larN);
+
+// let num = Math.random();
+// num = num +1; 
+// let total = Math.floor(num * 100)
+// console.log(total);
+
+const max = prompt('Enter The Max Number');
+const random = Math.floor(Math.random * 100) + 1;
+let guess = prompt('Guess The Number');
+
+
+while(true){
+    if(guess === 'quite'){
+        console.log('User Quite');
+        break;
+    }
+    if(guess === 'random'){
+        alert('Congratulations, You Have Guess The Correct Number')
+    } else {
+        guess = prompt ('Wrong Guess, Please Try Again');
     }
 }
-console.log(larN);
