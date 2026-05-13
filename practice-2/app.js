@@ -51,7 +51,7 @@
 
 // console.log(factorial)
 
-let largestNumber = [2,5,10,-14,2,7,1,9];
+// let largestNumber = [2,5,10,-14,2,7,1,9];
 
 // let larN = 0;
 
@@ -79,7 +79,7 @@ let largestNumber = [2,5,10,-14,2,7,1,9];
 // console.log(total);
 
 const max = prompt('Enter The Max Number');
-const random = Math.floor(Math.random * 100) + 1;
+const random = Math.floor(Math.random() * max) + 1;
 let guess = prompt('Guess The Number');
 
 
@@ -88,8 +88,13 @@ while(true){
         console.log('User Quite');
         break;
     }
-    if(guess === 'random'){
+    if(guess == random){
         alert('Congratulations, You Have Guess The Correct Number')
+        break;
+    } else if(guess < random){
+        guess = prompt('Your guess was too small');
+    } else if( guess > random){
+        guess = prompt('Your guess is too large')
     } else {
         guess = prompt ('Wrong Guess, Please Try Again');
     }
